@@ -1,0 +1,43 @@
+[
+  {
+    "name": "tavily_search",
+    "type": "function",
+    "description": "Search the web for pathway references, diagrams, images, or methods. Returns links and can inline small images as base64.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Natural language search query. Include pathway names or method names. Use current year if user asks for latest."
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "local_code_run",
+    "type": "function",
+    "description": "Safely execute Python code for pathway enrichment analysis, statistical testing, and visualization. The code runs in a sandboxed local environment with no network or OS access. It supports data manipulation (pandas, numpy), plotting (matplotlib, seaborn, plotly). Use this tool to perform computations or generate plots from uploaded CSV data. Do not save CSVs; print results instead. Use plt.savefig() for plots.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "string",
+          "description": "A complete Python script that analyzes or visualizes pathway enrichment data. Must use pandas to load the provided CSV path, and save any plots to PNG (e.g., plt.savefig('plot.png')). No internet, OS, or file system access is permitted outside the sandbox directory."
+        },
+        "timeout_sec": {
+          "type": "integer",
+          "description": "Maximum runtime in seconds (default 15, max 20). If exceeded, execution is safely terminated.",
+          "default": 15
+        },
+        "purpose": {
+          "type": "string",
+          "description": "Optional short note about the goal of the code (e.g., 'plot enrichment bar chart', 'compute FDR and rank pathways'). This helps the model decide how to generate the right analysis."
+        }
+      },
+      "required": ["code"]
+    }
+  }
+]

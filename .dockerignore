@@ -1,0 +1,55 @@
+# -----------------------------
+# Biochem-Agent .dockerignore
+# -----------------------------
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+*.log
+
+# Temporary runtime files
+runs/
+.files/
+app.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environment & secret files
+.env
+.env.local
+.env.*.backup
+*.pem
+*.key
+
+# Version control
+.git
+.gitignore
+.gitlab-ci.yml
+
+# IDE configs
+.vscode/
+.idea/
+*.iml
+
+# Notebooks / data dumps (optional)
+*.ipynb
+*.csv
+*.tsv
+*.xlsx
+
+# Build / distribution artifacts
+dist/
+build/
+__dist__/
+node_modules/
