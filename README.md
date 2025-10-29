@@ -93,6 +93,17 @@ biochem-agent/
 │   ├── __init__.py
 │   ├── local_code_runner.py    # Secure sandboxed Python code runner
 │   ├── types.py                # ToolResult definitions
+│              
+│── utils/
+│   ├── __init__.py
+│   ├── chat_start.py
+│   ├── cleanup_utils.py
+│   ├── csv_utils.py
+│   ├── history_utils.py
+│   ├── image_utils.py
+│   ├── logger_config.py
+│   ├── tavily_utils.py
+│   ├── tool_executor.py
 │
 ├── tools.json                  # Tool schemas (tavily_search, local_code_run)
 ├── pyproject.toml              # Dependency definitions for UV
