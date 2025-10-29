@@ -112,7 +112,7 @@ biochem-agent/
 | AI APIs          | **OpenAI Responses API**, **Tavily Search**                   |
 | Data Libraries   | `pandas`, `numpy`, `matplotlib`, `seaborn`, `plotly`, `scipy` |
 | Environment      | **python-dotenv**, **UV**                                     |
-| Containerization | **Docker** (with `ghcr.io/astral-sh/uv` base image)           |
+| Containerization | **Docker**         |
 
 
 ## 🧠 Features
