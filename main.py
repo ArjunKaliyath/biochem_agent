@@ -4,7 +4,7 @@ import os
 import base64
 import chainlit as cl
 from openai import AsyncOpenAI
-
+from dotenv import load_dotenv
 
 from utils.csv_utils import prepare_file_for_api
 from utils.image_utils import encode_image
@@ -17,6 +17,7 @@ from utils.logger_config import logger
 
 
 from tools.types import ToolResult, ToolResultType
+load_dotenv()
 
 # ----------------- OpenAI Client -----------------
 client = AsyncOpenAI(
